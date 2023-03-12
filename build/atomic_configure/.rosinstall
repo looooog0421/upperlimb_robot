@@ -1,0 +1,2 @@
+- setup-file:
+    local-name: /home/lgx/robot_ws/devel/setup.sh

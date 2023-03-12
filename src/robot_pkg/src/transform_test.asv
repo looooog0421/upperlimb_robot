@@ -1,0 +1,39 @@
+syms theta1 theta2 theta3 theta4 theta5 lb ls;
+
+%%     
+%      a        alpha     d      theta
+DH1 = [0,       0,        0,     theta1];
+DH2 = [0,       1.5708,   0,     theta2];
+DH3 = [0,       1.5708,   lb,    theta2];
+DH4 = [0,      -1.5708,   0,     theta2];
+DH5 = [0,       1.5708,   ls,    theta2];
+
+
+
+
+
+
+
+y = acos(-1)
+
+
+
+
+
+function T = transform(DH)
+    
+    a = DH(1);
+    alpha = DH(2);
+    d = DH(3);
+    theta = DH(4)
+
+    T = [cos(theta),             -sin(theta),            0,           a;
+         sin(theta)*cos(alpha),  cos(theta)*cos(alpha),  -sin(alpha), -d*sin(alpha);
+         sin(theta)*sin(alpha)
+        
+    
+    ]
+
+
+
+end
