@@ -13,6 +13,7 @@ import roboticstoolbox as rtb
 from math import pi
 import math
 import numpy as np
+import matplotlib.pyplot as plt
 
 
 
@@ -133,18 +134,23 @@ if __name__ == '__main__':
                     [0, 1, 0, 0   ],
                     [0, 0, 1, 0   ],
                     [0, 0, 0, 1]])
-    q00 = np.array([0,    pi/2,  -pi/2,  0,    pi/2,  pi/2+pi/6,  0])
-    q07 = np.array([0,    pi/2,  -pi/2,  0,    pi/2,  pi/2+pi/6,  pi/2])
-    q0007 = np.array([0,    pi/2,  -pi/2,  0,    pi/2,  pi/2,  pi/2])
-    qt = rtb.jtraj(q00,q07,100)
-    robot.plot(qt.q)
+    q00 = np.array([0,    pi/2,  -pi/2,  0,    pi/2,  pi/2,  0])
+    q07 = np.array([pi/2, pi/6,  -pi/2,  0,    pi/2,  pi/2,  pi/6])
+    q70 = np.array([pi/2, pi/6,  0    ,  pi/2, pi/2,  pi,  pi/2])
+    q = np.vstack((q00,q07,q70))
+    print(q.shape)
+    for i in range(q.shape[0]-1):
+        
+        qt = rtb.jtraj(q[i,:],q[i+1,:],100)
+        robot.plot(qt.q)
 
-    fk1 = robot.fkine(q0007)*T11
-    fk2 = robot.fkine(q07)*T11
-    Ja1 = robot.jacob0(q00)
-    Ja2 = robot.jacob0(q07)
-    print(fk1)
-    print(fk2)
+    plt.show()
+    # fk1 = robot.fkine(q0007)*T11
+    # fk2 = robot.fkine(q07)*T11
+    # Ja1 = robot.jacob0(q00)
+    # Ja2 = robot.jacob0(q07)
+    # print(fk1)
+    # print(fk2)
     # print(Ja1)
     # print('\n')
     # print(Ja2) 
