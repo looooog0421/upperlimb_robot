@@ -126,6 +126,8 @@ endif()
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
   include("/home/lgx/robot_ws/build/gtest/cmake_install.cmake")
+  include("/home/lgx/robot_ws/build/robot_pkg/cmake_install.cmake")
+  include("/home/lgx/robot_ws/build/vicon_pkg/cmake_install.cmake")
 
 endif()
 
