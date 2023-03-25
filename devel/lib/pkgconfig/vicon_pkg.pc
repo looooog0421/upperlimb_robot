@@ -1,0 +1,8 @@
+prefix=/home/lgx/robot_ws/devel
+
+Name: vicon_pkg
+Description: Description of vicon_pkg
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

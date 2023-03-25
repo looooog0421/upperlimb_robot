@@ -1,0 +1,2 @@
+robot_pkg:vicon_pkg
+-DCATKIN_DEVEL_PREFIX=/home/lgx/robot_ws/devel -DCMAKE_INSTALL_PREFIX=/home/lgx/robot_ws/install -G Unix Makefiles
