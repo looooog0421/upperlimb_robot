@@ -293,9 +293,11 @@ if __name__ == '__main__':
     # print(qt.q.shape)
     # T = robot.fkine(qy)
     # # print(robot)      
-    for i in range(q.shape[0]-1):
-        qt = rtb.jtraj(q[i,:],q[i+1,:],5)
-        robot.plot(qt.q)
+
+    # for i in range(q.shape[0]-1):
+    #     qt = rtb.jtraj(q[i,:],q[i+1,:],5)
+    #     robot.plot(qt.q)
+    
     # print(q.shape)
     # robot.plot(q)
     plt.plot(q[:,3])

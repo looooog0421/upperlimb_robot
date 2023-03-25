@@ -265,7 +265,7 @@ def Transform(DH_param):
 
 if __name__ == '__main__':
 
-    filedir = '/home/lgx/robot_ws/src/robot_pkg/src'
+    # filedir = '/home/lgx/robot_ws/src/robot_pkg/src'
     filename = '/home/lgx/Project/upperlimb_robot/src/data/first_point_float.csv'
     data = []
     with open(filename,'r') as f:
